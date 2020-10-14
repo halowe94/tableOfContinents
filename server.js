@@ -8,6 +8,8 @@ const path = require('path');
 const app = express();
 let PORT = process.env.PORT || 8081;
 
+var db = require('./models')
+
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -28,6 +30,8 @@ require("./routes/view-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+db.sequelize.sync({  }).then(function () {
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+  });
 });
