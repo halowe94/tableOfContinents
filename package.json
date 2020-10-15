@@ -15,5 +15,8 @@
     "mysql2": "^2.2.5",
     "sequelize": "^5.8.6",
     "watchify": "^3.11.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
   }
 }
