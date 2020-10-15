@@ -14,15 +14,7 @@ module.exports = function (app) {
         method: "GET",
       })
     }
-
-        // {
-        // names: "Africa", 
-        // area_km: "30370000",
-        // pop: "1287920000", 
-        // number_countries: "54", 
-        // largest_country:"Nigeria",
-        // popular_dish: "Tajine"}        
-    .then(res.render('africa', continentResults[0]));
+    res.render('africa', continentResults[0]);
 });
 
   app.get("/asia", function (req, res) {
