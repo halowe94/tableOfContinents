@@ -7,7 +7,7 @@ CREATE TABLE continents(
   id INT NOT NULL AUTO_INCREMENT,
   names VARCHAR(45) NULL,
   area_km INT (255) NULL,
-  pop INT(255) NULL,
+  pop BIGINT(255) NULL,
   number_countries INT(3) NULL,
   largest_country VARCHAR (45) NULL,
   popular_dish VARCHAR (45) NULL,

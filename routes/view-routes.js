@@ -1,10 +1,30 @@
+const ajax = require('ajax');
+var $ = require('jquery');
+
 module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("blog-simple");
   });
-  app.get("/africa", function (req, res) {
-    res.render("africa");
-  });
+
+  app.get('/africa', function(req, res){
+    //ajax request to the backend and in the .then execute the res.render with the response object you got back
+    let continentResults = function () {
+      return $.ajax({
+        url:'/api/continents',
+        method: "GET",
+      })
+    }
+
+        // {
+        // names: "Africa", 
+        // area_km: "30370000",
+        // pop: "1287920000", 
+        // number_countries: "54", 
+        // largest_country:"Nigeria",
+        // popular_dish: "Tajine"}        
+    .then(res.render('africa', continentResults[0]));
+});
+
   app.get("/asia", function (req, res) {
     res.render("asia");
   });

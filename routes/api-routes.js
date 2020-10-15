@@ -25,10 +25,14 @@ module.exports = function(app){
         })
     });
 
-    // app.post('/api/email', function(req, res){
-    //     db.email.update(req.body, 
-    //         {
-    //             where:
-    //         })
-    // })
+    app.post('/api/email', function(req, res){
+    //refers to table
+        db.email.create({
+            //refers to column in table
+            email_address: req.body.email
+            })
+        })
+
 }
+
+//front end is responsible for creating an ajax request with key name email and the value set to the text inside of the newsletter input

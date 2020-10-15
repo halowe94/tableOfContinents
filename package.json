@@ -10,10 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ajax": "0.0.4",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
+    "jquery": "^3.5.1",
     "mysql2": "^2.2.5",
     "sequelize": "^5.8.6",
     "watchify": "^3.11.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
   }
 }
