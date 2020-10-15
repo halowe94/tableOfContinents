@@ -5,12 +5,12 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("blog-simple");
   });
-  
+
   app.get('/africa', function(req, res){
     //ajax request to the backend and in the .then execute the res.render with the response object you got back
     let continentResults = function () {
       return $.ajax({
-        url:'api/continents',
+        url:'/api/continents',
         method: "GET",
       })
     }
