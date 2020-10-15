@@ -14,4 +14,21 @@ module.exports = function(app){
         })
     }
     )
+
+    app.get('/api/continent', function(req, res){
+        db.continent.findOne({
+            where: {
+                names: req.params.names
+            }
+        }).then(function(results){
+            res.render(results.names);
+        })
+    });
+
+    // app.post('/api/email', function(req, res){
+    //     db.email.update(req.body, 
+    //         {
+    //             where:
+    //         })
+    // })
 }
