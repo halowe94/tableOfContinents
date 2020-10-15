@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
+    "password": "12345678",
+=======
     "password": "WadiRum2018!",
+>>>>>>> c38590dc7236bbc9bea9678103ab2af4718ce86c
     "database": "continentsDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
