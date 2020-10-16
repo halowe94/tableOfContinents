@@ -24,9 +24,17 @@ module.exports = function (app) {
   app.get("/asia", function (req, res) {
     res.render("asia");
   });
+
   app.get("/australia", function (req, res) {
-    res.render("australia");
+    axios
+    .get(
+      'http://localhost:8080/api/continents/australia'
+
+    ).then((result) => { console.log('here', result); res.render('australia', result.data) }).catch((error) => {
+      console.log(error);
+    })
   });
+  
   app.get("/europe", function (req, res) {
     res.render("europe");
   });
