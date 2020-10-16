@@ -22,7 +22,13 @@ module.exports = function (app) {
 
 
   app.get("/asia", function (req, res) {
-    res.render("asia");
+    axios
+      .get(
+        'http://localhost:8080/api/continents/asia'
+
+      ).then((result) => { console.log('here', result); res.render('asia', result.data) }).catch((error) => {
+        console.log(error);
+      })
   });
 
   app.get("/australia", function (req, res) {
