@@ -42,17 +42,35 @@ module.exports = function (app) {
   });
   
   app.get("/europe", function (req, res) {
-    res.render("europe");
+    axios
+    .get(
+      'http://localhost:8080/api/continents/europe'
+
+    ).then((result) => { console.log('here', result); res.render('europe', result.data) }).catch((error) => {
+      console.log(error);
+    })
   });
+
   app.get("/northamerica", function (req, res) {
-    res.render("northamerica");
+    axios
+    .get(
+      'http://localhost:8080/api/continents/north%20america'
+
+    ).then((result) => { console.log('here', result); res.render('northamerica', result.data) }).catch((error) => {
+      console.log(error);
+    })
   });
+
   app.get("/southamerica", function (req, res) {
-    res.render("southamerica");
+    axios
+    .get(
+      'http://localhost:8080/api/continents/south%20america'
+
+    ).then((result) => { console.log('here', result); res.render('southamerica', result.data) }).catch((error) => {
+      console.log(error);
+    })
   });
-  app.get("/africa", function (req, res) {
-    res.render("africa");
-  });
+  
   app.get("*", function (req, res) {
     res.render("blog-simple");
   });
