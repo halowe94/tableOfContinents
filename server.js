@@ -6,7 +6,7 @@ const path = require('path');
 // Sets up the Express App
 // =============================================================
 const app = express();
-let PORT = process.env.PORT || 8081;
+let PORT = process.env.PORT || 8080;
 
 var db = require('./models')
 
@@ -25,12 +25,12 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-//require("./routes/api-routes")(app);
+require("./routes/api-routes")(app);
 require("./routes/view-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-db.sequelize.sync({  }).then(function () {
+db.sequelize.sync({ }).then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
