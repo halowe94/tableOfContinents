@@ -1,21 +1,25 @@
 const ajax = require('ajax');
-var $ = require('jquery');
+var axios = require('axios');
+const express = require('express');
+const router = express.Router()
 
 module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("blog-simple");
   });
 
-  app.get('/africa', function(req, res){
+  app.get('/africa', function (req, res) {
     //ajax request to the backend and in the .then execute the res.render with the response object you got back
-    let continentResults = function () {
-      return $.ajax({
-        url:'/api/continents',
-        method: "GET",
+    console.log("someshiteb")
+    axios
+      .get(
+        'http://localhost:8080/api/continents/africa'
+
+      ).then((result) => { console.log('here', result); res.render('africa', result.data) }).catch((error) => {
+        console.log(error);
       })
-    }
-    res.render('africa', continentResults[0]);
-});
+  })  
+
 
   app.get("/asia", function (req, res) {
     res.render("asia");

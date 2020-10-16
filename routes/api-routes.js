@@ -1,7 +1,8 @@
 var db = require('../models')
 
 module.exports = function(app){
-    app.post('/api/continent', function(req, res){
+    app.post('/api/continents', function(req, res){
+        console.log('here2');
         db.continent.create({
             names: req.body.names,
             area_km: req.body.area_km,
@@ -15,13 +16,14 @@ module.exports = function(app){
     }
     )
 
-    app.get('/api/continent', function(req, res){
+    app.get('/api/continents/:names', function(req, res){
+        console.log(req);
         db.continent.findOne({
             where: {
                 names: req.params.names
             }
         }).then(function(results){
-            res.render(results.names);
+            res.json(results);
         })
     });
 
