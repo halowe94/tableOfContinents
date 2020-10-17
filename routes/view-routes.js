@@ -66,7 +66,7 @@ module.exports = function (app) {
     .get(
       'http://localhost:8080/api/continents/south%20america'
 
-    ).then((result) => { console.log('here', result); res.render('southamerica', result.data) }).catch((error) => {
+    ).then((result) => { console.log('here'); res.render('southamerica', result.data) }).catch((error) => {
       console.log(error);
     })
   });

@@ -27,11 +27,14 @@ module.exports = function(app){
         })
     });
 
-    app.post('/api/email', function(req, res){
+    app.post('/api/emails', function(req, res){
     //refers to table
-        db.email.create({
+        console.log(req.body.emails);
+        db.emails.create({
             //refers to column in table
-            email_address: req.body.email
+            email_address: req.body.emails
+            }).then(function(results) {
+                res.json(results);
             })
         })
 
