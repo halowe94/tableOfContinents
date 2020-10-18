@@ -25,7 +25,7 @@ const submitEmail =  function(event){
     console.log("hi it works")
     event.preventDefault()
     return $.ajax({
-        url: "http://localhost:8080/api/continents/emails",
+        url: "/api/emails",
         data: document.getElementById("emailInput").value,
         method: "POST",
     });
