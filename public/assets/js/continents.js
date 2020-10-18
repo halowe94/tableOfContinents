@@ -1,4 +1,4 @@
-let $ = require("jquery");
+//let $ = require("jquery");
 // let submitBtn = document.getElementById("submitBtn");
 // let emailInput = document.getElementById("emailInput").value;
 
@@ -18,12 +18,14 @@ let $ = require("jquery");
 // submitFunc();
 
 let submitBtn = document.getElementById("submitBtn");
+console.log('submitBtn page');
+console.log(document.getElementById("emailInput").value);
 
 const submitEmail =  function(event){
     console.log("hi it works")
     event.preventDefault()
     return $.ajax({
-        url: "/api/continents/emails",
+        url: "http://localhost:8080/api/continents/emails",
         data: document.getElementById("emailInput").value,
         method: "POST",
     });
