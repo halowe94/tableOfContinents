@@ -27,7 +27,7 @@ module.exports = function (app) {
         })
     });
 
-    app.post('/api/emails', function (req, res) {
+    app.post('/api/continents/:emails', function (req, res) {
         //refers to table
         console.log("req.body.emails: ", req.body.emails);
         db.emails.create({
