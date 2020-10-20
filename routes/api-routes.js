@@ -1,7 +1,7 @@
-var db = require('../models')
+var db = require('../models');
 
-module.exports = function(app){
-    app.post('/api/continents', function(req, res){
+module.exports = function (app) {
+    app.post('/api/continents', function (req, res) {
         console.log('here2');
         db.continent.create({
             names: req.body.names,
@@ -9,31 +9,36 @@ module.exports = function(app){
             pop: req.body.pop,
             number_countries: req.body.number_countries,
             largest_country: req.body.largest_country,
-            popular_dish: req.body.popular_dish 
-        }).then(function(data){
+            popular_dish: req.body.popular_dish
+        }).then(function (data) {
             res.json(data)
         })
     }
     )
 
-    app.get('/api/continents/:names', function(req, res){
+    app.get('/api/continents/:names', function (req, res) {
         console.log(req);
         db.continent.findOne({
             where: {
                 names: req.params.names
             }
-        }).then(function(results){
+        }).then(function (results) {
             res.json(results);
         })
     });
 
-    app.post('/api/email', function(req, res){
-    //refers to table
-        db.email.create({
+    app.post('/api/continents/emails/', function (req, res) {
+        //refers to table
+        console.log(req.body);
+        console.log("req.body: ", req.body);
+        db.emails.create({
             //refers to column in table
-            email_address: req.body.email
-            })
+            email_address: req.body
+        }).then(function (results) {
+            console.log("email is added to the db");
+            res.json(results);
         })
+    })
 
 }
 
