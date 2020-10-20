@@ -1,7 +1,7 @@
 {
   "name": "develop",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project 2",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -14,5 +14,14 @@
     "mysql2": "^2.2.5",
     "sequelize": "^5.8.6",
     "watchify": "^3.11.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halowe94/tableOfContinents.git"
+  },
+  "bugs": {
+    "url": "https://github.com/halowe94/tableOfContinents/issues"
+  },
+  "homepage": "https://github.com/halowe94/tableOfContinents#readme"
 }
