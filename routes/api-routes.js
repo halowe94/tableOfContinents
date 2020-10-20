@@ -1,4 +1,4 @@
-var db = require('../models')
+var db = require('../models');
 
 module.exports = function (app) {
     app.post('/api/continents', function (req, res) {
@@ -27,12 +27,13 @@ module.exports = function (app) {
         })
     });
 
-    app.post('/api/continents/:emails', function (req, res) {
+    app.post('/api/continents/emails/', function (req, res) {
         //refers to table
-        console.log("req.body.emails: ", req.body.emails);
+        console.log(req.body);
+        console.log("req.body: ", req.body);
         db.emails.create({
             //refers to column in table
-            email_address: req.body.emails
+            email_address: req.body
         }).then(function (results) {
             console.log("email is added to the db");
             res.json(results);
