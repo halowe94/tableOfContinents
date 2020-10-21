@@ -20,14 +20,12 @@
 let submitBtn = document.getElementById("form");
 console.log('submitBtn page');
 console.log(submitBtn);
-console.log(document.getElementById("emailInput").value);
 
 const submitEmail =  function(event){
-    console.log("hi it works")
     event.preventDefault()
     return $.ajax({
         url: '/api/continents/emails/',
-        data: document.getElementById("emailInput").value,
+        data: {email: document.getElementById("emailInput").value},
         method: "POST",
     });
  };
