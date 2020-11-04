@@ -23,7 +23,7 @@ module.exports = function (app) {
   app.get("/asia", function (req, res) {
     axios
       .get(
-        '/api/continents/asia'
+        'https://stark-stream-40899.herokuapp.com/api/continents/asia'
 
       ).then((result) => { console.log('here', result); res.render('asia', result.data) }).catch((error) => {
         console.log(error);
@@ -33,7 +33,7 @@ module.exports = function (app) {
   app.get("/australia", function (req, res) {
     axios
     .get(
-      '/api/continents/australia'
+      'https://stark-stream-40899.herokuapp.com/api/continents/australia'
 
     ).then((result) => { console.log('here', result); res.render('australia', result.data) }).catch((error) => {
       console.log(error);
