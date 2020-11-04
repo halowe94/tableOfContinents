@@ -43,7 +43,7 @@ module.exports = function (app) {
   app.get("/europe", function (req, res) {
     axios
     .get(
-      '/api/continents/europe'
+      'https://stark-stream-40899.herokuapp.com/api/continents/europe'
 
     ).then((result) => { console.log('here', result); res.render('europe', result.data) }).catch((error) => {
       console.log(error);
@@ -53,7 +53,7 @@ module.exports = function (app) {
   app.get("/northamerica", function (req, res) {
     axios
     .get(
-      '/api/continents/north%20america'
+      'https://stark-stream-40899.herokuapp.com/api/continents/north%20america'
 
     ).then((result) => { console.log('here', result); res.render('northamerica', result.data) }).catch((error) => {
       console.log(error);
@@ -63,7 +63,7 @@ module.exports = function (app) {
   app.get("/southamerica", function (req, res) {
     axios
     .get(
-      '/api/continents/south%20america'
+      'https://stark-stream-40899.herokuapp.com/api/continents/south%20america'
 
     ).then((result) => { console.log('here', result); res.render('southamerica', result.data) }).catch((error) => {
       console.log(error);
