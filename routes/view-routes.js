@@ -10,10 +10,9 @@ module.exports = function (app) {
 
   app.get('/africa', function (req, res) {
     //ajax request to the backend and in the .then execute the res.render with the response object you got back
-    console.log("someshiteb")
     axios
       .get(
-        'http://localhost:8080/api/continents/africa'
+        '/api/continents/africa'
 
       ).then((result) => { console.log('here', result); res.render('africa', result.data) }).catch((error) => {
         console.log(error);
@@ -24,7 +23,7 @@ module.exports = function (app) {
   app.get("/asia", function (req, res) {
     axios
       .get(
-        'http://localhost:8080/api/continents/asia'
+        '/api/continents/asia'
 
       ).then((result) => { console.log('here', result); res.render('asia', result.data) }).catch((error) => {
         console.log(error);
@@ -34,7 +33,7 @@ module.exports = function (app) {
   app.get("/australia", function (req, res) {
     axios
     .get(
-      'http://localhost:8080/api/continents/australia'
+      '/api/continents/australia'
 
     ).then((result) => { console.log('here', result); res.render('australia', result.data) }).catch((error) => {
       console.log(error);
@@ -44,7 +43,7 @@ module.exports = function (app) {
   app.get("/europe", function (req, res) {
     axios
     .get(
-      'http://localhost:8080/api/continents/europe'
+      '/api/continents/europe'
 
     ).then((result) => { console.log('here', result); res.render('europe', result.data) }).catch((error) => {
       console.log(error);
@@ -54,7 +53,7 @@ module.exports = function (app) {
   app.get("/northamerica", function (req, res) {
     axios
     .get(
-      'http://localhost:8080/api/continents/north%20america'
+      '/api/continents/north%20america'
 
     ).then((result) => { console.log('here', result); res.render('northamerica', result.data) }).catch((error) => {
       console.log(error);
@@ -64,7 +63,7 @@ module.exports = function (app) {
   app.get("/southamerica", function (req, res) {
     axios
     .get(
-      'http://localhost:8080/api/continents/south%20america'
+      '/api/continents/south%20america'
 
     ).then((result) => { console.log('here', result); res.render('southamerica', result.data) }).catch((error) => {
       console.log(error);
