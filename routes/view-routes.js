@@ -12,7 +12,7 @@ module.exports = function (app) {
     //ajax request to the backend and in the .then execute the res.render with the response object you got back
     axios
       .get(
-        'https://stark-stream-40899.herokuapp.com/api/continents/africa'
+        '/api/continents/africa'
 
       ).then((result) => { console.log('here', result); res.render('africa', result.data) }).catch((error) => {
         console.log(error);
