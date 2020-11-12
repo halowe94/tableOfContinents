@@ -13,4 +13,4 @@ const submitEmail = function (event) {
   });
 };
 
-submitBtn.addEventListener("submit", submitEmail);
+submitBtn.addEventListener("submitBtn", submitEmail);
