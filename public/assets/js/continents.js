@@ -5,12 +5,13 @@ let submitBtn = document.getElementById("form");
 
 const submitEmail = function (event) {
   //   console.log("hi it works");
-  event.preventDefault();
+  let emailInput = document.getElementById("emailInput").value;
+  event.preventDefault(emailInput);
   $.ajax({
     url: "/api/continents/emails",
-    data: document.getElementById("emailInput").value,
+    data: emailInput,
     method: "POST",
   });
 };
 
-submitBtn.addEventListener("submitBtn", submitEmail);
+submitBtn.addEventListener("submit", submitEmail);
