@@ -37,7 +37,7 @@ module.exports = function (app) {
     db.emails
       .create({
         //refers to column in table
-        email_address: req.body,
+        email_address: req.body.email_address,
       })
       .then(function (results) {
         console.log("email is added to the db");
