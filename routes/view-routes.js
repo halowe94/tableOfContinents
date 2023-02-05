@@ -12,7 +12,7 @@ module.exports = function (app) {
     //ajax request to the backend and in the .then execute the res.render with the response object you got back
     axios
       .get(
-        '/api/continents/africa'
+        'https://table-of-continents.herokuapp.com/api/continents/africa'
 
       ).then((result) => { console.log('here', result); res.render('africa', result.data) }).catch((error) => {
         console.log(error);
@@ -23,7 +23,8 @@ module.exports = function (app) {
   app.get("/asia", function (req, res) {
     axios
       .get(
-        'https://stark-stream-40899.herokuapp.com/api/continents/asia'
+        'https://table-of-continents.herokuapp.com/api/continents/asia'
+
 
       ).then((result) => { console.log('here', result); res.render('asia', result.data) }).catch((error) => {
         console.log(error);
@@ -33,7 +34,8 @@ module.exports = function (app) {
   app.get("/australia", function (req, res) {
     axios
     .get(
-      'https://stark-stream-40899.herokuapp.com/api/continents/australia'
+      'https://table-of-continents.herokuapp.com/api/continents/australia'
+
 
     ).then((result) => { console.log('here', result); res.render('australia', result.data) }).catch((error) => {
       console.log(error);
@@ -43,7 +45,8 @@ module.exports = function (app) {
   app.get("/europe", function (req, res) {
     axios
     .get(
-      'https://stark-stream-40899.herokuapp.com/api/continents/europe'
+      'https://table-of-continents.herokuapp.com/api/continents/europe'
+
 
     ).then((result) => { console.log('here', result); res.render('europe', result.data) }).catch((error) => {
       console.log(error);
@@ -53,7 +56,8 @@ module.exports = function (app) {
   app.get("/northamerica", function (req, res) {
     axios
     .get(
-      'https://stark-stream-40899.herokuapp.com/api/continents/north%20america'
+      'https://table-of-continents.herokuapp.com/api/continents/north%20america'
+
 
     ).then((result) => { console.log('here', result); res.render('northamerica', result.data) }).catch((error) => {
       console.log(error);
@@ -63,7 +67,8 @@ module.exports = function (app) {
   app.get("/southamerica", function (req, res) {
     axios
     .get(
-      'https://stark-stream-40899.herokuapp.com/api/continents/south%20america'
+      'https://table-of-continents.herokuapp.com/api/continents/south%20america'
+
 
     ).then((result) => { console.log('here', result); res.render('southamerica', result.data) }).catch((error) => {
       console.log(error);
