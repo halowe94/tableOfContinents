@@ -16,7 +16,7 @@
     "express-handlebars": "^5.1.0",
     "jquery": "^3.5.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^5.8.6",
+    "sequelize": "^5.22.5",
     "watchify": "^3.11.1"
   },
   "devDependencies": {
