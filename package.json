@@ -14,7 +14,11 @@
     "axios": "^0.20.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
+    "heroku": "^8.0.1",
+    "heroku-cli": "^7.0.9",
     "jquery": "^3.5.1",
+    "my-sql": "^1.2.15",
+    "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "sequelize": "^5.22.5",
     "watchify": "^3.11.1"
